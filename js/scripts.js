@@ -99,10 +99,3 @@ if(best === "42") {
 } else {
   console.log('boooo');
 }
-
-/*
-alert((parseInt(anyNum) + 42));
-alert((parseInt(anyNum) - 42));
-alert((parseInt(anyNum) * 42));
-alert((parseInt(anyNum) / 42));
-*/
