@@ -143,20 +143,20 @@
 
 
 //Nested Arrays
-let firstMovie = ['Winter Soldier', 'Chris Evans'];
-let secondMovie = ['Super Troopers', 'Brian Cox'];
-let thirdMovie = ['Ip Man', 'Donnie Yen'];
-let fourthMovie = ['Lion King', 'James Earl Jones'];
-let fifthMovie = ['The Sandlot', 'Dennis Leary'];
-
-let favoriteMovies = [];
-
-favoriteMovies.push(firstMovie, secondMovie, thirdMovie, fourthMovie, fifthMovie);
-// console.log(favoriteMovies)
-
-let movieTitles = [];
-
-movieTitles.push(firstMovie[0], secondMovie[0], thirdMovie[0], fourthMovie[0], fifthMovie[0]);
+// let firstMovie = ['Winter Soldier', 'Chris Evans'];
+// let secondMovie = ['Super Troopers', 'Brian Cox'];
+// let thirdMovie = ['Ip Man', 'Donnie Yen'];
+// let fourthMovie = ['Lion King', 'James Earl Jones'];
+// let fifthMovie = ['The Sandlot', 'Dennis Leary'];
+//
+// let favoriteMovies = [];
+//
+// favoriteMovies.push(firstMovie, secondMovie, thirdMovie, fourthMovie, fifthMovie);
+// // console.log(favoriteMovies)
+//
+// let movieTitles = [];
+//
+// movieTitles.push(firstMovie[0], secondMovie[0], thirdMovie[0], fourthMovie[0], fifthMovie[0]);
 
 // console.log(movieTitles);
 
@@ -171,10 +171,38 @@ movieTitles.push(firstMovie[0], secondMovie[0], thirdMovie[0], fourthMovie[0], f
 // }
 
 //for loop
-for (let i = 0; i < favoriteMovies.length; i++) {
-//  console.log(favoriteMovies[i]);
-  if(favoriteMovies[i][0] === firstMovie[0])  {
-    let correctEntry = favoriteMovies[i]
-    alert(`${correctEntry[0]} ${correctEntry[1]}`)
-  }
+// for (let i = 0; i < favoriteMovies.length; i++) {
+// //  console.log(favoriteMovies[i]);
+//   if(favoriteMovies[i][0] === firstMovie[0])  {
+//     let correctEntry = favoriteMovies[i]
+//     alert(`${correctEntry[0]} ${correctEntry[1]}`)
+//   }
+// }
+
+
+
+
+
+let todos = [];
+
+let todo1 = [prompt("What do you want to do first?", "Eat")];
+
+let todo2 = [prompt("What do you want to do second?", "Eat")];
+
+let todo3 = [prompt("What do you want to do third?", "Eat")];
+//This is a good place for edge casing
+
+todos.push(todo1, todo2, todo3);
+
+for(let i = 0; i< todos.length; i++) {
+
+  let timeline = prompt(`How many days will it take to get ${todos[i][0]} done?`, "2");
+
+  timeline = !isNaN(parseInt(timeline)) ?
+  parseInt(timeline) : 2;
+
+  todos[i].unshift(timeline);
 }
+
+todos.sort();
+console.log(todos);
