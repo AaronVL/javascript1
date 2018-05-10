@@ -31,7 +31,7 @@ function Todo(tasks, dueDate, priority) {
   this.priority = priority;
 }
 
-let createTask = new Todo
+let createTask = new Todo()
 
 let tasks = prompt('new task')
 
