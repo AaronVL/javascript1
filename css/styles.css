@@ -1,0 +1,12 @@
+.btn {
+  height: 75px;
+  width: 75px;
+}
+
+.timeoutbtn {
+  background-color: green;
+}
+
+.intervalbtn {
+  background-color: blue;
+}
